@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Shopping Cart</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      padding: 30px;
+      background-color: #f2f1ef;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    .cart-item {
+      display: flex;
+      align-items: center;
+      background: #fff;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      transition: transform 0.2s ease;
+    }
+
+    .cart-item:hover {
+      transform: scale(1.01);
+    }
+
+    .cart-item img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-right: 25px;
+      border: 2px solid #ddd;
+    }
+
+    .cart-details {
+      flex-grow: 1;
+    }
+
+    .cart-details h3 {
+      font-size: 20px;
+      margin-bottom: 8px;
+      color: #444;
+    }
+
+    .cart-details p {
+      margin: 4px 0;
+      color: #666;
+    }
+
+    .remove-btn {
+      background-color: rgb(13, 38, 38);
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+      margin-top: 10px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .remove-btn:hover {
+      background-color: rgb(20, 55, 55);
+      transform: translateY(-2px);
+      text-decoration: underline;
+    }
+
+    .total {
+      margin-top: 40px;
+      font-size: 22px;
+      font-weight: bold;
+      color: #0f2d2d;
+      background-color: #b2e3e3;
+      padding: 20px 30px;
+      border-radius: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .checkout-btn {
+      background-color: rgb(13, 38, 38);
+      color: white;
+      border: none;
+      padding: 12px 22px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      letter-spacing: 0.5px;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+      transition: all 0.3s ease;
+    }
+
+    .checkout-btn:hover {
+      background-color: rgb(20, 55, 55);
+      transform: scale(1.05);
+      text-decoration: underline;
+    }
+
+    @media (max-width: 950px) {
+      .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .cart-item img {
+        margin-bottom: 15px;
+      }
+      .total {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Your Shopping Cart</h1>
+
+  <div id="cartItemsContainer"></div>
+
+  <div class="total" id="totalPriceContainer">
+    <span id="totalPrice">Total: ₹0</span>
+    <button class="checkout-btn" onclick="checkout()">Proceed to Checkout</button>
+  </div>
+
+  <script>
+    let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+    const container = document.getElementById("cartItemsContainer");
+    const totalPriceEl = document.getElementById("totalPrice");
+
+    function renderCart() {
+      container.innerHTML = '';
+      let total = 0;
+
+      if (cartItems.length === 0) {
+        container.innerHTML = "<p style='text-align:center; font-size:18px;'>Your cart is empty.</p>";
+        totalPriceEl.innerText = '';
+        return;
+      }
+
+      cartItems.forEach((item, index) => {
+        total += item.price * item.quantity;
+
+        const itemDiv = document.createElement("div");
+        itemDiv.className = "cart-item";
+        itemDiv.innerHTML = `
+          <img src="${item.image}" alt="${item.name}" />
+          <div class="cart-details">
+            <h3>${item.name}</h3>
+            <p><strong>Description:</strong> ${item.description}</p>
+            <p><strong>Price:</strong> ₹${item.price}</p>
+            <p><strong>Quantity:</strong> ${item.quantity}</p>
+            <p><strong>Subtotal:</strong> ₹${item.price * item.quantity}</p>
+            <button class="remove-btn" onclick="removeItem(${index})">Remove</button>
+          </div>
+        `;
+        container.appendChild(itemDiv);
+      });
+
+      totalPriceEl.innerText = `Total: ₹${total}`;
+    }
+
+    function removeItem(index) {
+      cartItems.splice(index, 1);
+      localStorage.setItem("cartItems", JSON.stringify(cartItems));
+      renderCart();
+    }
+
+    function checkout() {
+      alert("Proceeding to checkout...");
+      // Example: window.location.href = 'checkout.html';
+    }
+
+    renderCart();
+  </script>
+
+</body>
+</html>

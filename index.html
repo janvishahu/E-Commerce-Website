@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+    <link rel="stylesheet" href="secondmedia.css">
+</head>
+<body>
+
+    <!-- NAVIGATION BAR -->
+
+    <div id="header" class="header">
+        <span class="discountone">Free shipping 30-day return  or refund guarantee.</span>
+        <div class="header-right">
+        <button  onclick="window.location.href='signin.html?form=signin'" class="buttion-Sign-in-up" id="signInForm">SIGN IN</button>
+        <button onclick="window.location.href='signin.html?form=signin'"class="buttion-Sign-in-up" id="signUpForm">SIGN UP</button>
+        </div>
+    </div>
+
+    <!-- Second Navbar -->
+
+    <div class="homepage">
+        <div class="logo" id="logo"><img src="logo.png" height="40px" ></div>
+
+        <div class="innerdiv">
+            <div class="tags">
+                <a href="#homepage" onclick="loadPage('home.html')">HOME</a>
+                <a href="#About" onclick="loadPage('about.html')">ABOUT</a>
+                <a href="#Produt-one" onclick="loadPage('product.html')">PRODUCT</a>
+                <a href="#footer" onclick="loadPage('contact.html')">CONTACT</a>
+            </div>
+
+            <span class="shoppinglogo" id="shoppinglogo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="rgb(249, 246, 238)
+                    " class="bi bi-cart-fill" viewBox="0 0 16 16">
+                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                      </svg>
+                <span id="cartcount">0</span>
+            </span>
+        </div>
+        
+        
+
+
+    </div>
+
+    <!--HomePage -->
+
+    <div class="big-conatiner" id="homepage">
+        <div class=" first-container">
+            <span class="first-para">EXPLORE THE LATEST IN TEACH INDUSTRIES</span>
+            <span class="Second-para">Your Destination For</span>
+            <span class="Second-para">Cutting-Edge Gadgets!</span>
+            <span class="third-para">
+                Welcome TO EcomStore. your Ultimate destination for all your tech needs. We offer a wide range of products from top brands at unbeatabl
+                prices. Our products are carefully curated to meet the needs of our customers. 
+            </span>
+        
+            <button onclick="ExploreOurproduct()" class="explore-our-product" >Explore Our Products</button>
+
+        </div>
+
+        <div class="second-container">
+            <img src="homePageimage.png" class="electroni-img" width="100%">
+        </div>
+    </div>
+
+    
+
+    <!-- First Card Section  -->
+
+   <div class="first-card-container">
+        <div class="card-one">
+            <div class="inner-card">
+                <span style="color: #003366; font-weight: bold;">NEW YEAR SALE</span>
+                <span class="offer">Get An Extra 50% Off</span>
+                <button class="card-one-btn">SHOP NOW</button>
+            </div>
+            <div class="allimges">
+                <img src="laptop.png" class="product-img" width="100%">
+            </div>
+        </div>
+
+    <div class="card-one">
+        <div class="inner-card">
+            <span style="color: #003366; font-weight: bold;">NEW YEAR SALE</span>
+            <span class="offer">40% Discount On Speakers</span>
+            <button class="card-one-btn">SHOP NOW</button>
+        </div>
+        <div class="allimges">
+            <img src="Airpods.png" class="product-img" width="100%">
+        </div>
+    </div>
+
+    <div class="card-one">
+        <div class="inner-card">
+            <span style="color: #003366; font-weight: bold;">NEW YEAR SALE</span>
+            <span class="offer">Get An Extra 50% Off</span>
+            <button class="card-one-btn">SHOP NOW</button>
+        </div>
+        <div class="allimges">
+            <img src="Iphone.png" class="product-img" width="100%">
+        </div>
+    </div>
+   </div>
+
+
+    <!-- Second Card Section -->
+
+    <div class="second-card-container">
+
+        <div class="first-inner-box">
+
+            <div class="inner-cards">
+                <div class="icon-box">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#003366" class="bi bi-truck" viewBox="0 0 16 16">
+                        <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5zm1.294 7.456A2 2 0 0 1 4.732 11h5.536a2 2 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456M12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2"/>
+                      </svg>
+                </div>
+                <div class="Shipping-box">
+                    <span class="card-sentence">Worldwide Shipping</span>
+                    <span  style="color:rgb(72,72,72);">Order Above $100</span>
+                </div>
+            </div>
+
+
+            <div class="inner-cards">
+                <div class="icon-box">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#003366" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
+                        <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41m-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9"/>
+                        <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5 5 0 0 0 8 3M3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9z"/>
+                      </svg>
+                </div>
+                <div class="Shipping-box">
+                    <span class="card-sentence">Easy 30 Days Return</span>
+                    <span style="color:rgb(72,72,72);">Back Return in 7 Days</span>
+                </div>
+            </div>
+
+
+            <div class="inner-cards">
+                <div class="icon-box">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#003366" class="bi bi-currency-dollar" viewBox="0 0 16 16">
+                        <path d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73z"/>
+                      </svg>
+
+                </div>
+                <div class="Shipping-box">
+                    <span class="card-sentence">Money Back Guarantee</span>
+                    <span style="color:rgb(72,72,72);">Guarantee With in 30 Days</span>
+                </div>
+            </div>
+
+
+            <div class="inner-cards">
+                <div class="icon-box"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#003366" class="bi bi-headset" viewBox="0 0 16 16">
+                    <path d="M8 1a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a6 6 0 1 1 12 0v6a2.5 2.5 0 0 1-2.5 2.5H9.366a1 1 0 0 1-.866.5h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 .866.5H11.5A1.5 1.5 0 0 0 13 12h-1a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h1V6a5 5 0 0 0-5-5"/>
+                  </svg></div>
+                <div class="Shipping-box">
+                    <span class="card-sentence">Easy Online Support</span>
+                    <span style="color:rgb(72,72,72);">24/7 Any Time Support</span>
+                </div>
+            </div>
+
+        </div>   
+            
+    </div>    
+
+
+    <!--first-Paragraph -->
+
+    <div class="first-paragraph">
+
+        <span style="font-size: 40px; font-weight: bold;">Why Choose E-Store</span>
+        <span style="font-size: 20px;  color: rgb(72,72,72);">At E-Store, we redefine your shopping experience with convenience, variety, and value. </span>
+        
+    </div>
+
+
+    <!-- Third card Section -->
+
+    <div class="third-card-section" id="Produt-one">
+
+        <div class="main-container">
+                <div class="Product-name">
+                    <span class="product">Computers</span>
+                </div>
+
+                <div class="imgess-section">
+                    <img src="i-pad.png" alt="laptop"  width="60%" class="all-third-container-img">
+                </div>
+
+                <span class="laptop-001">Laptop</span>
+
+                <span class="stars" style=" color:rgb(255, 191, 0);">
+                    ★★★★★
+                </span>
+
+                <span class="third-sec-para">
+                    Powerful laptop with a quad-core i5 processor, 8GB RAM, 256GB SSD, and a 14-inch FHD display.
+                </span>
+
+                <div class="pricing">
+                    <span class="offer-price">₹999.99</span>
+                    <span class="origanl-price" style="text-decoration: line-through;">₹3999</span>
+                </div>
+
+                <span style="font-size: 20px;">Total Stocks Available :   50</span>
+
+                <div class="Quanity">
+                    <div>Quantity(Pieces)</div>
+                    <div class="addProduct">
+                        <button onclick="AddProduct('quantity1')" class="counting-buttons">+</button>
+                        <input id="quantity1" value="1" class="counting">
+                        <button onclick="RemoveProduct('quantity1')" class="counting-buttons">-</button>
+                    </div>
+                </div>
+                
+                <!-- Add to Cart Button -->
+
+                <div class="Addtocart">
+                    <div class="card-icon-shopping">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="rgb(249, 246, 238)
+                          " class="bi bi-cart-fill" viewBox="0 0 16 16">
+                            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                        </svg>
+                    </div>
+                    <span class="add-to-cart-text" onclick="addToCart('quantity1', 
+                        {
+                            name: 'Laptop',
+                            price: 999.99,
+                            description: 'Powerful laptop with a quad-core i5 processor, 8GB RAM, 256GB SSD, and a 14-inch FHD display.',
+                            image: 'i-pad.png'
+                        })">Add to Cart
+                    </span>
+                </div>
+
+            </div>
+
+
+        <div class="main-container">
+            <div class="Product-name">
+              <span class="product">Mobile</span>
+            </div>
+          
+            <div class="imgess-section">
+              <img src="goldIphone.png" alt="laptop" width="60%" class="all-third-container-img">
+            </div>
+          
+            <span class="laptop-001">Smartphone</span>
+            <span class="stars" style=" color: rgb(255, 191, 0)">
+              ★★★★★
+            </span>
+            <span class="third-sec-para">
+              Feature-rich smartphone with a 6.2-inch screen, 12MP dual camera, 128GB storage, and a 4000mAh battery
+            </span>
+          
+            <div class="pricing">
+              <span class="offer-price">₹499.99</span>
+              <span class="origanl-price" style="text-decoration: line-through;">₹55990</span>
+            </div>
+          
+            <span style="font-size: 20px;">Total Stocks Available :  100</span>
+          
+            <div class="Quanity">
+              <div>Quantity(Pieces)</div>
+              <div class="addProduct">
+                    <button onclick="AddProduct('quantity2')" class="counting-buttons">+</button>
+                    <input id="quantity2" value="1" class="counting">
+                    <button onclick="RemoveProduct('quantity2')" class="counting-buttons">-</button>
+              </div>
+            </div>
+          
+            <div class="Addtocart" id="addtocart-btn">
+              <div class="card-icon-shopping">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="rgb(249, 246, 238)"
+                    class="bi bi-cart-fill" viewBox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
+                    </svg>
+              </div>
+              <span class="add-to-cart-text" onclick="addToCart('quantity2', 
+                    {
+                        name: 'SmartPhone',
+                        price: 499.99,
+                        description: 'Feature-rich smartphone with a 6.2-inch screen, 12MP dual camera, 128GB storage, and a 4000mAh battery.',
+                        image: 'goldIphone.png'
+                    })">Add to Cart
+              </span>
+            </div>
+        </div>
+
+
+        <div class="main-container">
+            <div class="Product-name">
+                <span class="product">Audio</span>
+            </div>
+        
+            <div class="imgess-section">
+                <img src="appleheadphoneimg.png" alt="laptop" width="60%" class="all-third-container-img">
+            </div>
+        
+            <span class="laptop-001">Wireless Headphones</span>
+            <span class="stars" style=" color: rgb(255, 191, 0)">★★★★★</span>
+            <span class="third-sec-para">
+                High-quality wireless headphones with over-ear design, 20 hours of battery life, and a sleek black color.
+            </span>
+        
+            <div class="pricing">
+                <span class="offer-price">₹149.99</span>
+                <span class="origanl-price" style="text-decoration: line-through;">₹8999</span>
+            </div>
+        
+            <span style="font-size: 20px;">Total Stocks Available :  120</span>
+        
+            <div class="Quanity">
+                <div>Quantity(Pieces)</div>
+                <div class="addProduct">
+                    <button onclick="AddProduct('quantity3')" class="counting-buttons">+</button>
+                    <input id="quantity3" value="1" class="counting">
+                    <button onclick="RemoveProduct('quantity3')" class="counting-buttons">-</button>
+                </div>
+            </div>
+        
+            <div class="Addtocart" onclick="addToCart('quantity3')">
+                <div class="card-icon-shopping">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="rgb(249, 246, 238)"
+                        class="bi bi-cart-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
+                    </svg>
+                </div>
+                <span class="add-to-cart-text" onclick="addToCart('quantity3', {
+                    name: 'Wireless Headphones',
+                    price: 149.99,
+                    description: 'High-quality wireless headphones with over-ear design, 20 hours of battery life, and a sleek black color..',
+                    image: 'appleheadphoneimg.png'
+                  })">Add to Cart</span>
+            </div>
+        </div>
+        
+        
+
+    </div>
+
+
+    <!-- Fourth card Section -->
+
+
+    <div class="third-card-section">
+
+        <div class="main-container">
+        <div class="Product-name">
+            <span class="product">Smartwatch</span>
+        </div>
+
+        <div class="imgess-section">
+            <img src="SmartWatch.png" alt="laptop"  width="60%" class="all-third-container-img">
+        </div>
+
+        <span class="laptop-001">Smartwatch</span>
+        <span class="stars" style=" color:rgb(255, 191, 0);">
+            ★★★★★
+        </span>
+        <span class="third-sec-para">
+            Smartwatch with a 1.3-inch AMOLED display, water-resistant design, fitness tracking features, and a stylish silver color
+        </span>
+
+        <div class="pricing">
+            <span class="offer-price">₹239.99</span>
+            <span class="origanl-price" style="text-decoration: line-through;">₹4599</span>
+        </div>
+
+        <span style="font-size: 20px;">Total Stocks Available :   50</span>
+
+        <div class="Quanity">
+            <div>Quantity(Pieces)</div>
+            <div class="addProduct">
+                <!-- <button onclick="AddProduct4()" class="counting-buttons">+</button>
+                <input  id="quantity" name="quantity" value="1"  class="counting" id="counting">
+                <button onclick="RemoveProduct4()" class="counting-buttons">-</button> -->
+                <button onclick="AddProduct('quantity4')" class="counting-buttons">+</button>
+                <input id="quantity4" value="1" class="counting">
+                <button onclick="RemoveProduct('quantity4')" class="counting-buttons">-</button>
+            </div>
+        </div>
+
+        <div class="Addtocart">
+            <div class="card-icon-shopping">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="rgb(249, 246, 238)
+                " class="bi bi-cart-fill" viewBox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                  </svg>
+            </div>
+            <span class="add-to-cart-text" onclick="addToCart('quantity4', {
+                name: 'Smartwatch',
+                price: 239.99,
+                description: ' Smartwatch with a 1.3-inch AMOLED display, water-resistant design, fitness tracking features, and a stylish silver color',
+                image: 'SmartWatch.png'
+              })">Add to Cart</span>>
+        </div>
+
+        
+        </div>
+
+
+        <div class="main-container">
+            <div class="Product-name">
+                <span class="product">Speakers</span>
+            </div>
+    
+            <div class="imgess-section">
+                <img src="Marshall_Emberton_II_Speaker-removebg-preview.png" alt="laptop"  width="60%" class="all-third-container-img">
+            </div>
+    
+            <span class="laptop-001">Speakers</span>
+            <span class="stars" style=" color: rgb(255, 191, 0)">
+                ★★★★★
+            </span>
+            <span class="third-sec-para">
+                High-quality wireless headphones with over-ear design, 20 hours of battery life, and a sleek black color.
+            </span>
+    
+            <div class="pricing">
+                <span class="offer-price">₹399.99</span>
+                <span class="origanl-price" style="text-decoration: line-through;">₹9999</span>
+            </div>
+    
+            <span style="font-size: 20px;">Total Stocks Available :  100</span>
+    
+            <div class="Quanity">
+                <div>Quantity(Pieces)</div>
+                <div class="addProduct">
+                    <!-- <button onclick="AddProduct5()" class="counting-buttons">+</button>
+                    <input  id="quantity" name="quantity" value="1"  class="counting" id="counting">
+                    <button onclick="RemoveProduct5()" class="counting-buttons">-</button> -->
+                    <button onclick="AddProduct('quantity5')" class="counting-buttons">+</button>
+                    <input id="quantity5" value="1" class="counting">
+                    <button onclick="RemoveProduct('quantity5')" class="counting-buttons">-</button>
+                </div>
+            </div>
+    
+            <div class="Addtocart">
+                <div class="card-icon-shopping">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="rgb(249, 246, 238)
+                    " class="bi bi-cart-fill" viewBox="0 0 16 16">
+                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                      </svg>
+                </div>
+                <span class="add-to-cart-text" onclick="addToCart('quantity5', {
+                    name: 'Speakers',
+                    price: 399.99,
+                    description: '  High-quality wireless headphones with over-ear design, 20 hours of battery life, and a sleek black color.',
+                    image: 'Marshall_Emberton_II_Speaker-removebg-preview.png',
+                  })">Add to Cart</span>>
+            </div>
+    
+            
+            </div>
+
+
+            <div class="main-container">
+                <div class="Product-name">
+                    <span class="product">Television</span>
+                </div>
+        
+                <div class="imgess-section">
+                    <img src="Television.png" alt="laptop"  width="60%" class="all-third-container-img">
+                </div>
+        
+                <span class="laptop-001">Television</span>
+                <span class="stars" style=" color: rgb(255, 191, 0)">
+                    ★★★★★
+                </span>
+                <span class="third-sec-para">
+                    Enjoy vibrant Full HD visuals with this sleek 25-inch LED monitor, ideal for both work and entertainment.
+                </span>
+        
+                <div class="pricing">
+                    <span class="offer-price">₹249.99</span>
+                    <span class="origanl-price" style="text-decoration: line-through;">₹8299</span>
+                </div>
+        
+                <span style="font-size: 20px;">Total Stocks Available :  120</span>
+        
+                <div class="Quanity">
+                    <div>Quantity(Pieces)</div>
+                    <div class="addProduct">
+                        <!-- <button onclick="AddProduct6()" class="counting-buttons">+</button>
+                        <input  id="quantity" name="quantity" value="1"  class="counting" id="counting">
+                        <button onclick="RemoveProduct6()" class="counting-buttons">-</button> -->
+
+                        <button onclick="AddProduct('quantity6')" class="counting-buttons">+</button>
+                        <input id="quantity6" value="1" class="counting">
+                        <button onclick="RemoveProduct('quantity6')" class="counting-buttons">-</button>
+                    </div>
+                </div>
+        
+                <div class="Addtocart">
+                    <div class="card-icon-shopping">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="rgb(249, 246, 238)
+                        " class="bi bi-cart-fill" viewBox="0 0 16 16">
+                            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                          </svg>
+                    </div>
+                    <span class="add-to-cart-text" onclick="addToCart('quantity6', {
+                        name: 'Television',
+                        price: 249.99,
+                        description: ' Enjoy vibrant Full HD visuals with this sleek 25-inch LED monitor, ideal for both work and entertainment.',
+                        image: 'Television.png',
+                      })">Add to Cart</span>>
+                </div>
+        
+                
+                </div>
+
+
+    </div>
+
+
+    <!-- Second Paragraph  -->
+
+    <div class="first-paragraph">
+
+        <span style="font-size: 40px; font-weight: bold;">Why Choose E-Store</span>
+        <span style="font-size: 20px;  color: rgb(72,72,72);">At E-Store, we redefine your shopping experience with convenience, variety, and value. </span>
+        
+    </div>
+
+
+    <!-- About Website -->
+
+
+    <div class="big-container-about-website" id="About">
+
+        <div class="small-container-about-website" >
+
+            <div class="box-about-website">
+                <div class="box-numbers">1</div>
+                <div class="small-sentence">Wide Selection</div>
+                <div class="big-sentence">E-Store offers a diverse range of gadgets, from smartphones to smart home devices, ensuring you find what you need to elevate your lifestyle and meet your tech requirements.</div>
+            </div>   
+            
+            <div class="box-about-website">
+                <div class="box-numbers">2</div>
+                <div class="small-sentence">Quality Assurance</div>
+                <div class="big-sentence">Every gadget at Thapa Store undergoes rigorous quality checks, guaranteeing reliability and performance, so you can shop with confidence knowing you're getting the best.</div>
+            </div>
+
+            <div class="box-about-website">
+                <div class="box-numbers">3</div>
+                <div class="small-sentence">Competitive Prices</div>
+                <div class="big-sentence">Enjoy great value with E-Store's competitive prices on high-quality gadgets, making top-of-the-line technology accessible to all without compromising on quality or performance</div>
+            </div>
+            
+        </div>
+
+
+        <div class="small-container-about-website2">
+            <div class="big-inners-circle">
+               <div class="inners-circle">
+                <img src="teachnolgyworld.png" alt="teachnolgyworld" class="teachnolgyworld-img" width="90%">
+               </div>
+            </div>
+        </div>
+
+        <div class="small-container-about-website">
+
+            <div class="box-about-website2">
+                <div class="box-numbers">4</div>
+                <div class="small-sentence">Expert Guidance</div>
+                <div class="big-sentence">Our knowledgeable staff provides expert guidance, helping you choose the right gadget to meet your needs and preferences, ensuring you make informed decisions every step of the way</div>
+            </div>
+            <div class="box-about-website2">
+                <div class="box-numbers">5</div>
+                <div class="small-sentence">Convenient Shopping</div>
+                <div class="big-sentence">With E-Store, shopping for gadgets is easy and convenient. Our user-friendly website and secure payment options ensure a seamless experience from browsing to checkout, all from the comfort of your home.</div>
+            </div>
+            <div class="box-about-website2">
+                <div class="box-numbers">6</div>
+                <div class="small-sentence">Excellent Service</div>
+                <div class="big-sentence">E-Store is committed to providing excellent service to our customers. From prompt assistance with inquiries to efficient handling of orders and deliveries, we prioritize your satisfaction every step of the way.</div>
+            </div>
+            
+        </div>
+
+
+    </div>
+
+
+    <!-- Footer-Section -->
+
+    <div class="footer-mainConatiner" id="footer">
+
+        <div class="footer-firstbox">
+            <div class="footer-logo">
+                <img src="logo2.png" alt="logo">
+            </div>
+            <span >Welcome to  E-Store, your ultimate destination for cutting-edge gadgets!</span>
+            <div class="small-cards">
+
+                <!-- <div class="payment-cards"><img src="Bitcoin B.jpeg" alt="Bitcoin B" width="100%"></div> -->
+                <div class="payment-cards"><img src="Google Pay rolling out PIN-free payments through UPI LITE.jpeg" alt="Bitcoin B"  width="100%"></div>
+                <div class="payment-cards"><img src="Mastercard.jpeg" alt="Bitcoin B"  width="90%"></div>
+                <div class="payment-cards"><img src="Visa.jpeg" alt="Bitcoin B"  width="100%"></div>
+                <!-- <div class="payment-cards"><img src="PhonePe Logo - PNG Logo Vector Brand Downloads (SVG, EPS).jpeg" alt="Bitcoin B"  width="100%"></div> -->
+                
+            </div>
+        </div>
+
+        <div class="footer-Secondbox">
+            <div class="footer-secondbox-first-title">
+
+                <div class="highlite-title"><span>SHOPPING</span></div>
+                <span>Computer Store</span>
+                <span>Laptop Store</span>
+                <span>Accessorise</span>
+                <span>Sales & Discount</span>
+            
+            </div>
+
+            <div class="footer-secondbox-first-title">
+
+                <div class="highlite-title"><span>EXPERIENCE</span></div>
+                <span>Contact Us</span>
+                <span>Payment Method</span>
+                <span>Delivery</span>
+                <span>Return & Exchange</span>
+            
+            </div>
+
+            <div class="footer-secondbox-first-title">
+
+                <div class="highlite-title"><span>NEWSLETTER</span></div>
+                <span>Be the first to know about new
+                    arrivals, sales & promos!
+                </span>
+
+                <input type="email" placeholder=" Your Email " class="email-section" >
+                
+            </div>
+        
+        </div>
+
+        
+    </div>
+
+    <div class="second-footer-container">
+        <hr style="border: 1px solid white; width: 100%;">
+        <div class="My-name-section">Design and Code By Janvi Shahu</div>
+    </div>
+
+    
+            
+    
+</body>
+
+
+
+
+<script src="script.js"></script>
+</html>
